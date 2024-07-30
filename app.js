@@ -17,7 +17,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'jogo do numero secreto');
-    exibirTextoNaTela('p','escolhe o numero secreto');
+    exibirTextoNaTela('p','Lorena, escolha o número secreto');
 }
 
 exibirMensagemInicial();
@@ -28,14 +28,14 @@ function verificarChute() {
     if(chute== numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas':'tentativa';
-        let mensagemTentativas = `voce descobriu com ${tentativas} ${palavraTentativa}!`;
+        let mensagemTentativas = `Parabéns Lorena, descobriu com ${tentativas} ${palavraTentativa}!, Papai te amaaaa`;
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else{
         if(chute>numeroSecreto) {
-            exibirTextoNaTela('p','o numero secreto é menor');
+            exibirTextoNaTela('p','Eroou número secreto é menor');
         }else{
-            exibirTextoNaTela('p','o numero secreto é maior');
+            exibirTextoNaTela('p','Errou número secreto é maior');
         }
         tentativas++
         limparCampo();
